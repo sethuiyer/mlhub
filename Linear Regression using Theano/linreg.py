@@ -21,6 +21,7 @@ updates = [[W, W - gradientW * 0.5], [b, b - gradientB * 0.5]]
 
 train = theano.function(inputs=[X, Y], outputs=cost, updates=updates, allow_input_downcast=True) 
 
-for i in xrange(0, 201):
+for i in xrange(0, 200):
     train(x_data, y_data)
-    print W.get_value(), b.get_value()
+print 'Final Weights and Bias are: '
+print W.get_value(), b.get_value()
