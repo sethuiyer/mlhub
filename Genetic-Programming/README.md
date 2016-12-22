@@ -1,3 +1,6 @@
 #Genetric Programming
 
-Classification using scikit-learn and tpot.
+Testing Classification of hand written digits using scikit-learn and tpot.
+
+#### Output
+![output](output.png)
