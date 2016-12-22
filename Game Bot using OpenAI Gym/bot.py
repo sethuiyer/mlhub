@@ -31,6 +31,7 @@ def determine_turn(turn, observation_n, j, total_sum, prev_total_sum, reward_n):
 
 def main():
     env = gym.make('flashgames.CoasterRacer-v0')
+    env.configure(remotes='vnc://localhost:5900+15900')
     observation_n = env.reset()
 
     n = 0

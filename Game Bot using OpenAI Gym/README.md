@@ -10,5 +10,9 @@ Run`docker run -p 5900:5900 -p 15900:15900 --cap-add SYS_ADMIN --ipc
 
 Run `python bot.py`
 
+#### Output
+![output](output.png)
+
+Takes 4 minutes to complete a lap, clearly says how naive the bot is.
 ###TODO
 * Add a Deep Q-Learning bot using Tensorflow
