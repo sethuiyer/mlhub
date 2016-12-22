@@ -24,7 +24,7 @@ def determine_turn(turn, observation_n, j, total_sum, prev_total_sum, reward_n):
     if(observation_n != None):
         j+=1
         total_sum += reward_n
-    print(j)
+    
 
     return(turn, j, total_sum, prev_total_sum)
 
