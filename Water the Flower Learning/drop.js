@@ -4,7 +4,7 @@ function Drop(x, y) {
   this.y = y;
   this.r = 8;
   this.toDelete = false;
-
+  this.isDead = false;
   this.show = function() {
     noStroke();
     fill(150, 0, 255);
@@ -15,6 +15,14 @@ function Drop(x, y) {
     this.toDelete = true;
   }
 
+this.checkDead = function()
+{
+  if (this.y <=0)
+  {
+    this.isDead = true;
+    this.toDelete = true;
+  }
+}
   this.hits = function(flower) {
     var d = dist(this.x, this.y, flower.x, flower.y);
     if (d < this.r + flower.r) {

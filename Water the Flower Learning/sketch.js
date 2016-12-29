@@ -1,14 +1,24 @@
-var ship;
+var ships = []
 var flowers = [];
 var drops = [];
 var score = 0;
-
+var isGameOver = false;
+var Neuvol;
+var gen;
 function setup() {
   createCanvas(600, 400);
-  ship = new Ship();
     for (var i = 0; i < 6; i++) {
     flowers[i] = new Flower(i*80+80, 60);
   }
+  Neuvol = new Neuroevolution({
+            population:5,
+            network:[2, [2], 1],
+        });
+    gen = Neuvol.nextGeneration();
+for(var i in this.gen){
+        var b = new Ship();
+        ships.push(b)
+    }
 }
 
 function draw() {
@@ -29,6 +39,7 @@ function draw() {
         drops[i].evaporate()
       }
     }
+    
   }
 
   var edge = false;
@@ -48,9 +59,16 @@ function draw() {
   }
 
   for (var i = drops.length-1; i >= 0; i--) {
-    if (drops[i].toDelete) {
+    drops[i].checkDead();
+    if (drops[i].toDelete || drops[i].isDead) {
+        if(drops[i].isDead)
+        {
+            isGameOver = true;
+        }
       drops.splice(i, 1);
+
     }
+
   }
 
 for (var i = flowers.length-1; i >= 0; i--) {
@@ -59,7 +77,8 @@ for (var i = flowers.length-1; i >= 0; i--) {
       score = score + 100;
     }
   }
-  if (flowers.length == 0)
+  
+  if (flowers.length == 0 || isGameOver)
   {
     background(51);
     fill(0, 102, 153);
