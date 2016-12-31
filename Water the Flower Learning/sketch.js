@@ -1,109 +1,173 @@
 var ships = []
 var flowers = [];
-var drops = [];
 var score = 0;
-var isGameOver = false;
+var isGameOver = [];
 var Neuvol;
 var gen;
+var alivecount;
+var generation = 1;
+var nearestflower = 2500;
+var minindex = 0;
+var a;
+var flag;
+//create the canvas and initialize the generation consiting of 5 ships.
 function setup() {
-  createCanvas(600, 400);
+  createCanvas(610, 600);
     for (var i = 0; i < 6; i++) {
     flowers[i] = new Flower(i*80+80, 60);
   }
+setFrameRate(5);
   Neuvol = new Neuroevolution({
-            population:5,
-            network:[2, [2], 1],
+            population:1,
+            network:[2, [9], 2],
+            randomBehaviour:0.1,
+            mutationRate:0.5, 
+            mutationRange:2, 
         });
+
     gen = Neuvol.nextGeneration();
+
 for(var i in this.gen){
         var b = new Ship();
         ships.push(b)
+        isGameOver.push(false)
     }
+    alivecount = ships.length;
 }
 
-function draw() {
-  background(51);
-  fill(0, 102, 153);
-    text("Score: "+score, width-70, 30);
-  ship.show();
-  ship.move();
 
-  for (var i = 0; i < drops.length; i++) {
-    drops[i].show();
-    drops[i].move();
-    for (var j = 0; j < flowers.length; j++) {
-      if (drops[i].hits(flowers[j])) {
 
-        score = score + 10;
-        flowers[j].grow();
-        drops[i].evaporate()
-      }
+//function used to draw to the canvas
+function draw() 
+{
+
+      background(51);
+      fill(0, 102, 153);
+      text("Score: "+score, width-90, 30);
+      text("Generation: "+generation,width-90,60);
+    //show the ships
+    for (var i in ships)
+    {
+            ships[i].show();
+            
+                ships[i].setDir(1);
+            
     }
-    
-  }
 
-  var edge = false;
-
-  for (var i = 0; i < flowers.length; i++) {
-    flowers[i].show();
-    flowers[i].move();
-    if (flowers[i].x > width || flowers[i].x < 0) {
-      edge = true;
+    for(var i in flowers)
+    {
+        flowers[i].show();
     }
-  }
-
-  if (edge) {
-    for (var i = 0; i < flowers.length; i++) {
-      flowers[i].shiftDown();
-    }
-  }
-
-  for (var i = drops.length-1; i >= 0; i--) {
-    drops[i].checkDead();
-    if (drops[i].toDelete || drops[i].isDead) {
-        if(drops[i].isDead)
+     
+     //FIND THE NEAREST FLOWER
+        nearestflower = 2500;
+     
+        for(var i in ships)
         {
-            isGameOver = true;
+                for (var j in flowers)
+                {
+                    a = Math.abs(flowers[j].x-ships[i].x);
+                    if(a <=nearestflower)
+                    {
+                        minindex = j;
+                        nearestflower = a;
+                    }
+                }
+                
+            ///FEED THE INPUT TO THE NEUROEVOLUTION 
+
+                var direction = ships[i].getDir();
+                var inputs = [minindex,direction]
+                var res = this.gen[i].compute(inputs);
+
+
+                if(res > 0.5){
+                        ships[i].SetDir(-1);
+                    }
+                    else
+                    {
+                        ships[i].setDir(1);
+                    }
+                    ships[i].move();
+                flag = false;
+                if((((ships[i].x - nearestflower) <=0) && (ships[i].getDir() == 1)) || (((ships[i].x - nearestflower) >=0) &&(ships[i].getDir() == -1)))
+                {
+                    flag = true;
+                }
+                    
+                   
+                    if(!flag)
+                    {
+                        flag = false;
+                        score -=80;
+                        ships[i].changeDir();
+                    }
+                        ships[i].setcoor(ships[i].x+direction*nearestflower);
+                        
+                        if(flowers[minindex]!=undefined)
+                        {
+                                flowers[minindex].grow();
+                        }
+                        flowers.splice(minindex,1);
+                        score += 100
+                    
+                    
+                if((ships[i].x <=0) || (ships[i].x >=width))
+                {
+                    ships[i].setcoor(width/2);
+                    
+                    score-=100;
+                    
+                }
+
+                if(this.gen[i] !=undefined)
+                {
+                    Neuvol.networkScore(this.gen[i], score);
+                }
+                }
+
+                if(flowers.length == 0)
+                {
+                    
+                    
+                    addTable();
+                    
+                    generation = generation + 1;
+                    this.gen = Neuvol.nextGeneration();
+                    ships = [];
+                    isGameOver = [];
+
+                    for(var i in this.gen){
+                        var b = new Ship();
+                        ships.push(b)
+                        isGameOver.push(false)
+                        }
+                    
+                    score = 0;
+
+                    ships[i].setcoor(width/2);
+                    for (var i = 0; i < 6; i++) 
+                    {
+                    flowers[i] = new Flower(i*80+80, 60);
+                    }
+                    
+                }
         }
-      drops.splice(i, 1);
-
-    }
-
-  }
-
-for (var i = flowers.length-1; i >= 0; i--) {
-    if (flowers[i].toDelete) {
-      flowers.splice(i, 1);
-      score = score + 100;
-    }
-  }
-  
-  if (flowers.length == 0 || isGameOver)
-  {
-    background(51);
-    fill(0, 102, 153);
-    text("Score: "+score, width/2, height/2 - 20);
-    fill(255,0,0)
-    text("Game over",300,200);
-  }
-}
-
-function keyReleased() {
-  if (key != ' ') {
-    ship.setDir(0);
-  }
-}
-
-
-function keyPressed() {
-  if (key === ' ') {
-    var drop = new Drop(ship.x, height);
-    drops.push(drop);
-  }
-
-  if (keyCode === RIGHT_ARROW) {
-    ship.setDir(1);
-  } else if (keyCode === LEFT_ARROW) {
-    ship.setDir(-1);
-  }
-}
+     
+        
+          function addTable() 
+          {
+      
+            var myTableDiv = document.getElementById("mytable");
+            var tr = document.createElement('TR');
+            var td = document.createElement('TD');
+            var td2 = document.createElement('TD');
+            td.width='75';
+            td.appendChild(document.createTextNode(generation));
+            td2.appendChild(document.createTextNode(score));
+            tr.appendChild(td);
+            tr.appendChild(td2);
+            myTableDiv.appendChild(tr);
+    
+}  
+    

@@ -6,24 +6,10 @@ function Flower(x, y) {
 
   this.xdir = 1;
   this.toDelete = false;
+  
   this.grow = function() {
     this.r = this.r + 2;
-    if (this.r == 40)
-    {
-      this.toDelete=true;
-    }
-  }
-
-  this.shiftDown = function() {
-   
-    this.xdir *= -1;
-    this.y += this.r;
-
-  
-  }
-
-  this.move = function() {
-    this.x = this.x + this.xdir;
+    this.toDelete = true;
   }
 
   this.show = function() {
