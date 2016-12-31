@@ -16,7 +16,7 @@ function setup() {
     for (var i = 0; i < 6; i++) {
     flowers[i] = new Flower(i*80+80, 60);
   }
-setFrameRate(5);
+setFrameRate(1);
   Neuvol = new Neuroevolution({
             population:1,
             network:[2, [9], 2],
@@ -49,21 +49,24 @@ function draw()
     for (var i in ships)
     {
             ships[i].show();
-            
-                ships[i].setDir(1);
-            
-    }
-
-    for(var i in flowers)
+            if(generation % 2 ==0)
+            {
+                ships[0].setDir(1);    
+    
+            }
+          else
+          {
+            ships[0].setDir(-1);
+          }
+    for(var k in flowers)
     {
-        flowers[i].show();
+        flowers[k].show();
     }
      
      //FIND THE NEAREST FLOWER
         nearestflower = 2500;
      
-        for(var i in ships)
-        {
+       
                 for (var j in flowers)
                 {
                     a = Math.abs(flowers[j].x-ships[i].x);
@@ -101,6 +104,7 @@ function draw()
                         flag = false;
                         score -=80;
                         ships[i].changeDir();
+
                     }
                         ships[i].setcoor(ships[i].x+direction*nearestflower);
                         
@@ -116,7 +120,8 @@ function draw()
                 {
                     ships[i].setcoor(width/2);
                     
-                    score-=100;
+                    
+
                     
                 }
 
@@ -124,7 +129,7 @@ function draw()
                 {
                     Neuvol.networkScore(this.gen[i], score);
                 }
-                }
+                
 
                 if(flowers.length == 0)
                 {
@@ -138,6 +143,7 @@ function draw()
                     isGameOver = [];
 
                     for(var i in this.gen){
+                        //alert("yolo");
                         var b = new Ship();
                         ships.push(b)
                         isGameOver.push(false)
@@ -153,6 +159,8 @@ function draw()
                     
                 }
         }
+    }
+
      
         
           function addTable() 
