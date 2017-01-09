@@ -9,3 +9,4 @@ Things Implemented as of now:
 4. Simple Game bot using OpenAI's Gym and Universe
 5. Email Classification using command line utility of mlpack
 6. Water the Flower Learning (Neuroevolution in Javascript)
+7. Using Deep net to classify the classic MNIST dataset.
