@@ -16,5 +16,8 @@ Pretty bad with respect to industry standards but pretty good with respect to th
 
 Not that good with respect to the industry standards as well as the model taken.
 
+* With Convolutional Neural Networks and GPU
+![output](conv_net_gpu.png)
+
 ###TODO:
 Use Tensorboard to view the computational graph
