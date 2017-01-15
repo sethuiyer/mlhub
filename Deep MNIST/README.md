@@ -19,5 +19,6 @@ Not that good with respect to the industry standards as well as the model taken.
 * With Convolutional Neural Networks and GPU
 ![output](conv_net_gpu.png)
 
+GPU did help to increase the accuracy a little bit, but still far away from the state of art.
 ###TODO:
 Use Tensorboard to view the computational graph
