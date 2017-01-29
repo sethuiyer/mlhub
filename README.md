@@ -3,10 +3,16 @@ Repository containing various tidbits of code related to machine learning / AI /
 
 Things Implemented as of now:
 
-1. Linear Regression in Python using Theano
-2. Collaborative Filtering in C++ using mlpack
-3. 3 Layer Feedforward Neural net in C++ using Armadillo
-4. Simple Game bot using OpenAI's Gym and Universe
-5. Email Classification using command line utility of mlpack
-6. Water the Flower Learning (Neuroevolution in Javascript)
-7. Using Deep net to classify the classic MNIST dataset.
+
+
+| Project Name        | Language used|
+ ------------- |:-------------:| 
+| Linear Regression in Python using Theano     | Python | 
+| Collaborative Filtering in C++ using mlpack      | C++      |  
+| 3 Layer Feedforward Neural net in C++ using Armadillo | C++      |
+| Simple Game bot using OpenAI's Gym and Universe | Python      |    
+| Email Classification using command line utility of mlpack | Bash     |    
+| Water the Flower Learning using Neuroevolution | Javascript     |    
+| Using Deep net to classify the classic MNIST dataset. | Python      |    
+| Deep Sentiment Analysis on IMDb dataset using TFLearn | Python      |    
+    
