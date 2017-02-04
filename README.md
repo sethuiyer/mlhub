@@ -16,3 +16,15 @@ Things Implemented as of now:
 | Using Deep net to classify the classic MNIST dataset. | Python      |    
 | Deep Sentiment Analysis on IMDb dataset using TFLearn | Python      |    
     
+
+Things to Implement in future:
+
+| Project Name        | Language used|
+ ------------- |:-------------:| 
+|MNIST using Julia     | Julia | 
+|Neural Image Caption Generator     | Python |
+|Parameter tuning of deep nets using H2O      | R |  
+|Recognising Digits and Numbers in natural scence Images     | Python |
+|Recurrent Neural net using Theano     | Python |  
+
+
