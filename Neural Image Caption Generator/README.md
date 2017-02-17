@@ -7,6 +7,7 @@ A small python function written to fetch the image caption from images. Uses cod
 
 ##Changes Done
 1. `capgen.py` written which pre processes the image and generates the caption using pre trained models
+2. Added a Search engine based on elasticsearch which returns images based on the matching descriptions
 
 ##Problems
-1. `py_caffe_extract_features.py` is not extracting the features correctly.
+1. `py_caffe_extract_features.py` is not extracting the features correctly from the VGG-16 network.
