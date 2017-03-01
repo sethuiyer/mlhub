@@ -2,4 +2,4 @@
 
 Dataset Used: [Street View House Numbers](http://ufldl.stanford.edu/housenumbers/)
 
-Model: Using Convolutional Neural nets and Tensorflow
+Model: Using Convolutional Neural nets in Pytorch.
