@@ -14,7 +14,9 @@ Things Implemented as of now:
 | Email Classification using command line utility of mlpack | Bash     |    
 | Water the Flower Learning using Neuroevolution | Javascript     |    
 | Using Deep net to classify the classic MNIST dataset. | Python      |    
-| Deep Sentiment Analysis on IMDb dataset using TFLearn | Python      |    
+| Deep Sentiment Analysis on IMDb dataset using TFLearn | Python      |
+| CIFAR 10 using Numpy | Python      |
+| Support Vector Regression using sklearn | Python      |  
     
 
 Things to Implement in future:
