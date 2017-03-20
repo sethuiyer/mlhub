@@ -1,3 +1,8 @@
 ## Imagenet Classification
 
-Using Keras, We try to identify the objects present in an image.
+Using inbuilt VGG 16 model of keras, we do image classification in this code.
+
+#Input
+![image](img.jpg)
+#Output
+![image](img_output.jpg)
