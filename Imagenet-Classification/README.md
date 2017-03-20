@@ -2,7 +2,7 @@
 
 Using inbuilt VGG 16 model of keras, we do image classification in this code.
 
-#Input
+## Input
 ![image](img.jpg)
-#Output
+## Output
 ![image](img_output.jpg)
