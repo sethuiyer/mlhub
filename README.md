@@ -17,7 +17,8 @@ Things Implemented as of now:
 | Deep Sentiment Analysis on IMDb dataset using TFLearn | Python      |
 | CIFAR 10 using Numpy | Python      |
 | Support Vector Regression using sklearn | Python      |  
-    
+| Imagenet Classification using Keras  |  Python  |
+
 
 Things to Implement in future:
 
