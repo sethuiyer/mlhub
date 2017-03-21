@@ -19,7 +19,6 @@ Things Implemented as of now:
 | Support Vector Regression using sklearn | Python      |  
 |Neural Image Caption Generator     | Python |
 
-    
 
 Things to Implement in future:
 
