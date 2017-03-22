@@ -1,7 +1,7 @@
 import numpy as np
 import code
 
-from neuraltalk.imagernn.utils import initw
+from imagernn.utils import initw
 
 class LSTMGenerator:
   """ 

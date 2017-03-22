@@ -1,4 +1,4 @@
-from neuraltalk.imagernn.generic_batch_generator import GenericBatchGenerator
+from imagernn.generic_batch_generator import GenericBatchGenerator
 import numpy as np
 
 def decodeGenerator(params):

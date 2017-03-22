@@ -1,16 +1,13 @@
-##Neural Image Caption Generator
+## Neural Image Caption Generator
+**What it does** : Generates Caption from Images 
 
-Code to fetch the image caption from images. Uses code from [Neuraltalk](https://github.com/karpathy/neuraltalk) repository.
+**How?** : Using Keras, it extracts the top fully connected layer of VGG 16 and passes that information to the LSTM network which generates the caption.
 
-##Output
-![image](dop_output.png)
+**Output** : 
 
-##Changes Done
-1. `capgen.py` written which pre processes the image and generates the caption using pre trained models
-2. Added a Search engine based on elasticsearch which returns images based on the matching descriptions. Code can be seen in `description_search` folder.
+![image](img_caption.png)
 
-##Problems
-1. The weights are not being loaded in the caffe net due to inconsistences in `deploy_features.prototxt`
+Here is the img.jpg for which the caption is 'a young boy is playing with a soccer ball' 
 
-##Solution
-Used Keras to extract the image features and caffe to generate the description. Code can be seen in `extract_feats.py`
+![image](img.jpg)
+

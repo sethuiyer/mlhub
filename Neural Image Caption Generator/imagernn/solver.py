@@ -1,6 +1,6 @@
 import time
 import numpy as np
-from neuraltalk.imagernn.utils import randi
+from imagernn.utils import randi
 
 class Solver:
   """

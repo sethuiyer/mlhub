@@ -1,8 +1,8 @@
 import numpy as np
 import code
-from neuraltalk.imagernn.utils import merge_init_structs, initw, accumNpDicts
-from neuraltalk.imagernn.lstm_generator import LSTMGenerator
-from neuraltalk.imagernn.rnn_generator import RNNGenerator
+from imagernn.utils import merge_init_structs, initw, accumNpDicts
+from imagernn.lstm_generator import LSTMGenerator
+from imagernn.rnn_generator import RNNGenerator
 
 def decodeGenerator(generator):
   if generator == 'lstm':
