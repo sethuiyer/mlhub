@@ -18,15 +18,8 @@ Things Implemented as of now:
 | CIFAR 10 using Numpy | Python      |
 | Support Vector Regression using sklearn | Python      |  
 |Neural Image Caption Generator     | Python |
+|Recurrent Neural net using Tensorflow     | Python |  
 
 
-Things to Implement in future:
-
-| Project Name        | Language used|
- ------------- |:-------------:| 
-|MNIST using Julia     | Julia | 
-|Parameter tuning of deep nets using H2O      | R |  
-|Recognising Digits and Numbers in natural scence Images     | Python |
-|Recurrent Neural net using Theano     | Python |  
 
 
