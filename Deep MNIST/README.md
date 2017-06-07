@@ -1,12 +1,16 @@
-#Deep MNIST
+# Deep MNIST
 
 Just my attempt to construct a deep neural net with ReLU activation units using tensorflow to classify the digits of MNIST dataset.
 
-`deep_mnist.py` contains a feedforward neural network and `deep_mnist_conv.py` contains 2-D convolutional network.
+`deep_mnist.py` contains a feedforward neural network
+
+`deep_mnist_conv.py` contains 2-D convolutional network.
+
+
 `deep_mnist_rnn.py` has LSTM network tackling MNIST dataset
 
 
-###Output
+### Output
 *  Without Convolution Neural Networks
 ![output](output.png)
 
