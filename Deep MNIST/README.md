@@ -31,4 +31,7 @@ GPU did help to increase the accuracy a little bit, but still far away from the 
 Similar to conv net performance
 
 * With Multi Layer Perceptron and Selu Activation units
+
 ![output](output_snn.PNG)
+
+Perofrmance is similar to Conv net. Shows the effectiveness of Selu Activation units
