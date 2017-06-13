@@ -19,6 +19,7 @@ Things Implemented as of now:
 | Support Vector Regression using sklearn | Python      |  
 |Neural Image Caption Generator     | Python |
 |Recurrent Neural net using Tensorflow     | Python |  
+| Happy or Sad Webapp                      | Python  |
 
 
 
