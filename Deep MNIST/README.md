@@ -16,7 +16,7 @@ Just my attempt to construct a deep neural net with ReLU activation units using 
 
 Pretty bad with respect to industry standards but pretty good with respect to the model used.
 
-* With Convolutional Neural Networks 
+* With Convolutional Neural Networks
 ![output](output_conv.png)
 
 Not that good with respect to the industry standards as well as the model taken.
@@ -29,3 +29,6 @@ GPU did help to increase the accuracy a little bit, but still far away from the 
 * With Recurrent Neural Networks
 ![output](output_rnn.png)
 Similar to conv net performance
+
+* With Multi Layer Perceptron and Selu Activation units
+![output](output_snn.PNG)
