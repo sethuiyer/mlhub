@@ -6,8 +6,9 @@ Just my attempt to construct a deep neural net with ReLU activation units using 
 
 `deep_mnist_conv.py` contains 2-D convolutional network.
 
-
 `deep_mnist_rnn.py` has LSTM network tackling MNIST dataset
+
+`mnist-snn-kaggle.ipynb` uses [Self Normalizing Neural Networks](https://arxiv.org/abs/1706.02515)
 
 
 ### Output
