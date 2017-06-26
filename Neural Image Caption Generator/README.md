@@ -6,16 +6,29 @@
 **How?** : Using Keras, it extracts the top fully connected layer of VGG 16 and passes that information to the LSTM network which generates the caption.
 
  **Test Images**
- 
- ![image](img.jpg)
- 
- ![image](surf.png)
- 
- ![image](tennis.jpg)
+ <table>
+  <tr>
+ <td> img.jpg </td>
+ <td> surf.png </td>
+ <td> tennis.jpg </td>
+ </tr>
+ <tr>
+ <td>
+ <img src="img.jpg" width="33%">
+ </td>
+ <td>
+ <img src="surf.png" width="33%">
+ </td>
+ <td>
+ <img src="tennis.jpg" width="33%">
+ </td>
+ </tr>
+ </table>
  
  and this is their caption
  
 ![image](output.png)
 
+To Understand how this works: [Understanding Image Captioning](https://github.com/sethuiyer/deep-image-search-course/blob/master/Week_5%20Understanding%20Image%20Captioning.pdf)
 
 
