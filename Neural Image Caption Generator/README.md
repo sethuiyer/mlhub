@@ -14,13 +14,13 @@
  </tr>
  <tr>
  <td>
- <img src="img.jpg" width="33%">
+ <img src="img.jpg">
  </td>
  <td>
- <img src="surf.png" width="33%">
+ <img src="surf.png">
  </td>
  <td>
- <img src="tennis.jpg" width="33%">
+ <img src="tennis.jpg">
  </td>
  </tr>
  </table>
