@@ -3,6 +3,12 @@
 A simple Flask based webapp where you paste the url of an image and it gives you the prediction whether the person in the image is happy or sad
 ![image](output_image.PNG)
 
+### Demo
+[Happy or Sad Predictor - A Web application built using Deep Learning](https://www.youtube.com/watch?v=Ol_N0fkcEBs)
+
+### Tutorial
+Refer the IPython notebook, Code is self explanatory.
+
 ### Data Collection
 
 Data was collected using [Fatkun Batch Download Image extension](https://chrome.google.com/webstore/detail/fatkun-batch-download-ima/nnjjahlikiabnchcpehcpkdeckfgnohf?hl=en). After downloading the images, the data directory should contain two folders, train and validation and inside each folder, happy_face and sad_face folder should be created.
