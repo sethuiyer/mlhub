@@ -21,3 +21,4 @@ Things Implemented as of now:
 |Recurrent Neural net using Tensorflow     | Python |  
 | Happy or Sad Webapp                      | Python  |
 | Finding successful projects                      | Python  |
+| Multi Emotion Detector                      | Python  |
