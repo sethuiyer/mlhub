@@ -23,4 +23,6 @@ Things Implemented as of now:
 | Finding successful projects                      | Python  |
 | Multi Emotion Detector | Python |
 | WVGLAE Ensemble        | Python |
+| Pokemon Classification       | Python |
+
 
