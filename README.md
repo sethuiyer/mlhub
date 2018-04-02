@@ -1,6 +1,6 @@
 
 <p align="center"><img src="mlhub.png" height="160px;", width=auto/></p>
-*<b>mlhub</b> is a repository containing various tidbits of code related to Machine Learning / AI / Computer Vision/ Neural Networks. This repository can give ideas about Machine learning projects to work on for beginners. 
+<b>mlhub</b> is a repository containing various tidbits of code related to Machine Learning / AI / Computer Vision/ Neural Networks. This repository can give ideas about Machine learning projects to work on for beginners. 
 
 Things Implemented as of now (Oldest to Newest):
 
