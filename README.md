@@ -1,7 +1,8 @@
-# mlhub
-Repository containing various tidbits of code related to machine learning / AI / Computer Vision/ Neural Networks
 
-Things Implemented as of now:
+<p align="center"><img src="mlhub.png" height="160px;", width=auto/></p>
+**mlhub** is a repository containing various tidbits of code related to Machine Learning / AI / Computer Vision/ Neural Networks. This repository can give ideas about Machine learning projects to work on for beginners. 
+
+Things Implemented as of now (Oldest to Newest):
 
 
 
@@ -25,4 +26,4 @@ Things Implemented as of now:
 | WVGLAE Ensemble        | Python |
 | Pokemon Classification       | Python |
 
-
+*Licensed under [MIT License](https://github.com/sethuiyer/mlhub/blob/master/LICENSE.md)*
